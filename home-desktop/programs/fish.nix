@@ -7,7 +7,7 @@
 
   functions = {
     rebuild = ''
-      nixos-rebuild switch --use-remote-sudo --flake $HOME/nixos#whitefox
+      nixos-rebuild switch --use-remote-sudo --flake $HOME/nixos#vanessa
     '';
   };
 }

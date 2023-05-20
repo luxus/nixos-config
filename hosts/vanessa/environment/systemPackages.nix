@@ -2,7 +2,6 @@
 with pkgs;
 [
   ccid
-  nur.repos.linyinfeng.canokey-udev-rules
 
   fontpreview
   wget

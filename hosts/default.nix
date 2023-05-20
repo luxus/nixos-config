@@ -6,7 +6,7 @@
 }:
 let
   module = { pkgs, username, ... }@args: inputs.haumea.lib.load {
-    src = ./whitefox;
+    src = ./vanessa;
     inputs = args // {
       inherit inputs;
     };
@@ -14,10 +14,10 @@ let
   };
 in
 {
-  whitefox = nixpkgs.lib.nixosSystem {
+  vanessa = nixpkgs.lib.nixosSystem {
     system = "x86_64-linux";
     modules = [
-      ./whitefox/_hardware.nix
+      ./vanessa/_hardware.nix
       common/btrfs.nix
       common/encryption.nix
       module

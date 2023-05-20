@@ -1,6 +1,7 @@
 { config
 , lib
 , modulesPath
+, pkgs
 , ...
 }: {
   imports = [
@@ -14,10 +15,6 @@
       kernelModules = [ "kvm-intel" "v4l2loopback" ];
     };
 
-  };
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/fe0ecfb9-db21-43f0-915a-70c37765f181";
-    fsType = "btrfs";
   };
   fileSystems = {
     "/boot" = {

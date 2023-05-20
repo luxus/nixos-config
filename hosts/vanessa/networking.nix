@@ -1,7 +1,7 @@
 {
   firewall.enable = false;
   hostName = "vanessa";
-  useDHCP = true;
+  useDHCP = false;
 
   networkmanager = {
     enable = true;
