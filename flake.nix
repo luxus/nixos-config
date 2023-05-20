@@ -1,5 +1,5 @@
 {
-  description = "ocfox's flake";
+  description = "luxus flake";
 
   outputs =
     { self
@@ -9,7 +9,7 @@
     , ...
     } @ inputs:
     let
-      username = "ocfox";
+      username = "luxus";
       home = {
         default = { pkgs, ... }@args: haumea.lib.load {
           src = ./home;

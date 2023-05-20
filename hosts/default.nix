@@ -18,6 +18,8 @@ in
     system = "x86_64-linux";
     modules = [
       ./whitefox/_hardware.nix
+      common/btrfs.nix
+      common/encryption.nix
       module
       inputs.home-manager.nixosModules.home-manager
       inputs.grub2-themes.nixosModules.default
