@@ -1,10 +1,11 @@
 { pkgs }:
 {
+  plymouth.enable = true;
   loader = {
     grub2-theme = {
       enable = true;
-      theme = "whitesur";
-      screen = "4k";
+      theme = "vimix";
+      screen = "ultrawide2k";
     };
     grub = {
       enable = true;
@@ -14,6 +15,7 @@
     };
     efi.canTouchEfiVariables = true;
   };
-
-  kernelPackages = pkgs.linuxPackages_latest;
+  #very slow boot
+ # kernelParams = [ "ip=dhcp" ];
+    kernelPackages = pkgs.linuxKernel.packages.linux_zen;
 }

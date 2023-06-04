@@ -11,5 +11,10 @@ with pkgs;
   sptlrx
   playerctl
   cava
+     logseq
+    _1password-gui-beta
+    gitkraken
+    neovide 
   wf-recorder
+  jami
 ]

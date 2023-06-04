@@ -1,54 +1,55 @@
 { pkgs, ... }:
 with pkgs;
 [
-  ccid
-
-  fontpreview
   wget
   git
   screenfetch
   neofetch
   feh
-  ueberzug
   exa
   bat
   tty-clock
   lazygit
-  ranger
   fzf
-  unzip
-  p7zip
+  ouch
   htop
   bottom
-  surf
   screen
   ripgrep
-  pinentry
-  unzip
-  pamixer
+  fd
   acpi
   rsync
-  youtube-dl
   aria2
   openssl
-  mpv
-  xwinwrap
-  ffmpeg
-  alejandra
-  polkit_gnome
-  zola
-  thunderbird-wayland
-  rpiplay
-  taplo-lsp
-  helix
-  tree-sitter
-  boost
+  gdu
+  # neovim stuff
+  unzip
+  gnumake
   gcc
-  lua
-  sumneko-lua-language-server
-  jdk
-  lua
-  rust-analyzer
-  yarn
-  virt-manager
+  lemonade # copy in ssh?
+ # wl-copy
+ # cmake do i need it?
+  nodejs_20
+  tree-sitter
+# nix 
+  deadnix
+  nil
+  statix
+ # rust
+ rust-analyzer
+  clippy
+  rustc
+  cargo
+  # lua
+  stylua
+  selene
+  lua-language-server
+# shell
+  shellcheck
+  # rustdesk
+  comma
+  python311
+  (python311.withPackages (ps: with ps; [ pynvim pip ]))
+
+
 ]

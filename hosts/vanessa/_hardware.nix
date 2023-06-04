@@ -22,10 +22,21 @@
       fsType = "vfat";
     };
   };
+   boot.kernelParams = [ "module_blacklist=i915" ];
+  hardware = {
+cpu.intel.updateMicrocode = true;
+    nvidia.prime.nvidiaBusId = "1@0:0:0";
+    nvidia.prime.intelBusId = "0@0:2:0";
+    opengl = {
+      enable = true;
+      extraPackages = with pkgs; [ ];
+      driSupport = true;
+      driSupport32Bit = true;
+    };
 
-  swapDevices = [ ];
+  };
 
-  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
-  hardware.opengl.enable = true;
-  hardware.keyboard.qmk.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+  };
 }

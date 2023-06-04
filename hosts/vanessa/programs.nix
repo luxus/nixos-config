@@ -6,9 +6,13 @@
     pinentryFlavor = "gnome3";
     enableSSHSupport = true;
   };
-  dconf.enable = true;
+  nix-index.enable = true;
+  command-not-found.enable = false;
   fish = {
     useBabelfish = true;
     enable = true;
   };
+  zsh.enable = true;
+  dconf.enable = true;
+  thefuck.enable = true;
 }

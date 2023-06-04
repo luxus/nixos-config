@@ -3,6 +3,7 @@
   config = {
     allowUnfree = true;
     allowBroken = false;
+    cudaSupport = true;
   };
   overlays = [
     #  inputs.nur.overlay
